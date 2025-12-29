@@ -1,34 +1,25 @@
 // src/pages/Catalog.jsx
 import React, { useState, useMemo } from 'react';
-import ProductCard from '../components/ProductCard';
+import { useNavigate } from 'react-router-dom';
+import ProductCard from '../components/ProductCard'; 
 import CatalogFilter from '../components/CatalogFilter';
-import ProductDetailModal from '../components/ProductDetailModal';
 import { products } from '../data/products';
 import { FileDown } from 'lucide-react';
 
 const Catalog = () => {
     const [activeFilter, setActiveFilter] = useState('all');
-    const [selectedProduct, setSelectedProduct] = useState(null);
+    const navigate = useNavigate();
 
-    // Filter Logic - Hanya menyisakan 3 kategori utama
     const filteredProducts = useMemo(() => {
         if (activeFilter === 'all') return products;
-        // Filter sederhana berdasarkan kategori (bag/shoe)
         return products.filter(p => p.category === activeFilter);
     }, [activeFilter]);
 
     const handleProductClick = (product) => {
-        setSelectedProduct(product);
+        navigate(`/product/${product.id}`);
     };
-
-    const handleCloseModal = () => {
-        setSelectedProduct(null);
-    };
-
-    const downloadLink = "/path/to/full_catalog.pdf";
 
     return (
-        // BACKGROUND UTAMA PUTIH (Menghilangkan bingkai cream)
         <div className="bg-white min-h-screen font-sans text-[#6D2323] relative">
             
             <div className="max-w-[1430px] mx-auto relative min-h-screen">
@@ -43,50 +34,66 @@ const Catalog = () => {
                 {/* 2. CONTENT AREA (Filter & Grid) */}
                 <div className="px-6 md:px-[107px] py-12">
                     
-                    {/* Filter Component */}
                     <CatalogFilter activeFilter={activeFilter} setFilter={setActiveFilter} />
 
                     {/* Product Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
-                        {filteredProducts.map((product) => (
-                            <ProductCard 
-                                key={product.id} 
-                                product={product} 
-                                onClick={handleProductClick}
-                            />
-                        ))}
+                        {filteredProducts.map((product) => {
+                            // PERBAIKAN: Memastikan ProductCard menerima gambar meskipun struktur data berubah
+                            const enhancedProduct = {
+                                ...product,
+                                image: product.image || (product.variants && product.variants[0]?.images[0])
+                            };
+
+                            return (
+                                <ProductCard 
+                                    key={product.id} 
+                                    product={enhancedProduct} 
+                                    onClick={handleProductClick}
+                                />
+                            );
+                        })}
                     </div>
                 </div>
 
-{/* 3. CTA SECTION (Need Detailed Specifications?) */}
-                 <div className="px-6 md:px-[107px] pb-24 mt-12">
-                    <div className="bg-[#FFFDE7] rounded-2xl p-12 text-center border border-[#E5D0AC]/50 shadow-sm">
-                        <h2 className="text-3xl md:text-[40px] font-serif font-bold text-[#6D2323] mb-4">
-                            Need Detailed Specifications?
-                        </h2>
-                        <p className="text-[#6D2323]/75 mb-8 text-base md:text-lg max-w-2xl mx-auto">
-                            Request our comprehensive PDF catalog with full specifications and bulk pricing.
-                        </p>
-                        
-                        <a 
-                            // PERUBAHAN: Menggunakan konstanta link
-                            href="https://drive.google.com/drive/folders/1AdCFOto0PL2cFzhMn_8uqOingKwEdP79"
-                            // PERUBAHAN: Membuka di tab baru dan keamanan link
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center bg-[#A31D1D] text-[#FEF9E1] font-sans font-normal text-base py-3 px-8 rounded-lg shadow-md hover:bg-maroon transition duration-300"
-                        >
-                            <FileDown className="w-5 h-5 mr-2" />
-                            Request Full Catalog
-                        </a>
-                    </div>
-                </div>
+                {/* 3. CTA SECTION (Diperbarui untuk dua katalog) */}
+<div className="px-6 md:px-[107px] pb-24 mt-12">
+    <div className="bg-[#FFFDE7] rounded-2xl p-12 text-center border border-[#E5D0AC]/50 shadow-sm">
+        <p className="text-[#6D2323]/75 mb-8 text-base md:text-lg max-w-2xl mx-auto font-serif italic">
+            Request our comprehensive digital catalogs for Bags and Shoes with full specifications.
+        </p>
+        
+        {/* Container Tombol: flex-col untuk HP, flex-row untuk Desktop */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+            {/* Tombol Katalog Tas (Milioiki) */}
+            <a 
+                href="https://drive.google.com/drive/folders/10P8Eq0FEBxwPY5KaVrkm0SmRQ63hSQW6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-[#A31D1D] text-[#FEF9E1] font-sans font-bold text-base py-3 px-8 rounded-lg shadow-md hover:bg-[#6D2323] transition duration-300 uppercase tracking-widest"
+            >
+                <FileDown className="w-5 h-5 mr-2" />
+                Bags Catalog
+            </a>
 
+            {/* Tombol Katalog Sepatu (d'schön) */}
+            <a 
+                href="https://drive.google.com/file/d/1IaKYeIokqDHR0-rMLEFn81eERCVJNAUU/view?usp=drivesdk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-[#A31D1D] text-[#FEF9E1] font-sans font-bold text-base py-3 px-8 rounded-lg shadow-md hover:bg-[#6D2323] transition duration-300 uppercase tracking-widest"
+            >
+                <FileDown className="w-5 h-5 mr-2" />
+                Shoes Catalog
+            </a>
+        </div>
+    </div>
+</div>
             </div>
 
             {/* 4. FLOATING WHATSAPP BUTTON */}
             <a 
-                href="https://wa.me/6281280001670"
+                href="https://wa.me/6285771019071"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center"
@@ -96,10 +103,7 @@ const Catalog = () => {
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                 </svg>
             </a>
-
-            {/* 5. MODAL DETAIL */}
-            <ProductDetailModal product={selectedProduct} onClose={handleCloseModal} /> 
-
+            
         </div>
     );
 };

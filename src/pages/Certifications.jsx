@@ -9,7 +9,7 @@ const Certifications = () => {
     const trainingCerts = certificationData.filter(c => c.type === 'training');
 
     // Helper array untuk 22 item
-    const imageIndices = Array.from({ length: 22 }, (_, i) => i + 1);
+    const imageIndices = Array.from({ length: 27 }, (_, i) => i + 1);
 
     // Helper untuk icon dinamis (Digunakan di Section 3)
     const getIcon = (iconName) => {
@@ -225,7 +225,7 @@ const Certifications = () => {
             <section className="py-24 px-6 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-serif font-bold text-[#6D2323]">Why International Buyers Trust Us</h2>
+                        <h2 className="text-4xl font-serif font-bold text-[#6D2323]">Why Us</h2>
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

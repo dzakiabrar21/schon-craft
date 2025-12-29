@@ -1,130 +1,317 @@
 // src/data/products.js
 
+// src/data/products.js
+
+// src/data/products.js
+
+// src/data/products.js
+
+// src/data/products.js
+
 export const products = [
-  // --- SHOES ---
+  // --- BAGS (BRAND: MILIOIKI) ---
+{
+    id: "B-Schmette",
+    name: "Schmette Bag",
+    category: "bag",
+    brand: "Milioiki",
+    basePrice: 695000,
+    sizes: "Small, Medium",
+    description: "A mini crochet bag with a compact silhouette, crafted from poly yarn and finished with a genuine cow leather sling. Perfect for carrying your essential items.",
+    material: "Poly Yarn finished with a Genuine Cow Leather Sling",
+    variants: [
+      { 
+        colorName: "Sage Green", 
+        colorCode: "#96A48B", 
+        images: ["/images/schmette-sm-sage.png"] 
+      },
+      { 
+        colorName: "Terracotta", 
+        colorCode: "#E2725B", 
+        // Ditambahkan 2 foto tambahan
+        images: [
+          "/images/schmette-sm-terra.jpg",
+          "/images/schmette-sm-terra-2.jpg",
+          "/images/schmette-sm-terra-3.jpg"
+        ] 
+      },
+      { 
+        colorName: "Mocca", 
+        colorCode: "#A38068", 
+        images: ["/images/schmette-sm-mocca.png"] 
+      },
+      { 
+        colorName: "Grayish Blue", 
+        colorCode: "#969EB0", 
+        images: ["/images/schmette-sm-grayish.png"] 
+      },
+      { 
+        colorName: "Olive", 
+        colorCode: "#80004fff", 
+        images: ["/images/schmette-sm-olive.png"] 
+      }
+    ],
+    details: "Crafted with meticulous hand-crochet techniques, featuring a magnetic snap closure and a premium satin interior lining.",
+    maintenance: "Avoid washing crocheted bags in a washing machine as it can damage the knit structure. Hand washing is a gentler method. Choose a mild detergent or soap that is free from bleach. In addition to washing, regularly clean the knitted bag with a soft brush or cloth to remove dust and light dirt."
+},
   {
-    id: "S-Freesia",
-    name: "Freesia Shoe",
-    category: "shoe",
-    brand: "Milioiki", // Asumsi dari gambar
-    priceRange: "USD 25-35",
-    description: "An elegant crochet shoe featuring delicate floral patterns. Perfect for spring and summer collections.",
-    material: "Premium Cotton Yarn",
-    image: "/images/freesia.jpg"
+    id: "B-Rose",
+    name: "Rose Bag",
+    category: "bag",
+    brand: "Milioiki",
+    basePrice: 598000,
+    sizes: "One Size",
+    description: "A rose-shaped sling bag paired with a genuine leather handle. Compact yet expressive, this piece blends soft poly yarn construction with a refined cow leather sling. Perfect as a statement small bag for everyday wear, it offers just the right space for your essentials.",
+    material: "Soft Poly Yarn with Refined Cow Leather Sling",
+    variants: [
+      {
+        colorName: "Maroon",
+        colorCode: "#800000",
+        images: [         
+          "/images/rose-maroon.png",
+          "/images/rose-maroon-2.png",
+          "/images/rose-maroon-3.jpg"]
+      }
+    ],
+    details: "Unique rose silhouette handcrafted with premium precision. Features a waterproof inner lining and a sturdy genuine cow leather strap for comfort and durability. Size (Dia 19 x 5) cm.",
+    maintenance: "Avoid washing crocheted bags in a washing machine as it can damage the knit structure. Hand washing is a gentler method. Choose a mild detergent or soap that is free from bleach. In addition to washing, regularly clean the knitted bag with a soft brush or cloth to remove dust and light dirt."
   },
   {
-    id: "S-Spartacus",
-    name: "Spartacus Boots",
-    category: "shoe",
-    brand: "d'schön",
-    priceRange: "IDR 150,000-200,000",
-    description: "Stylish boots design making it easy to pair with various outfits.",
-    material: "Poly Yarn",
-    image: "/images/spartacus.jpg"
+    id: "B-Denia",
+    name: "Denia Bag",
+    category: "bag",
+    brand: "Milioiki",
+    basePrice: 869000,
+    sizes: "Standard",
+    description: "A crocheted handbag with floral details and a sturdy leather strap, combining craftsmanship, style, and everyday functionality. Made from nylon yarn combined with leather, it offers both durability and elegance for daily use.",
+    material: "High-quality Nylon Yarn combined with Genuine Cow Leather",
+  variants: [
+      { 
+        colorName: "Terracotta Red", 
+        colorCode: "#BF3C2F", 
+        images: ["/images/denia-terracotta.png", "/images/denia-terracotta-2.jpg"] 
+      },
+      { 
+        colorName: "Dusty Teal", 
+        colorCode: "#6BA3B8", 
+        images: ["/images/denia-teal.png"] 
+      },
+      { 
+        colorName: "Desert Sand", 
+        colorCode: "#BA9470", 
+        images: ["/images/denia-sand.png"] 
+      },
+      { 
+        colorName: "Wild Berry", 
+        colorCode: "#D11E48", 
+        images: ["/images/denia-berry.png"] 
+      }
+    ],
+    details: "Features intricate floral crochet details handcrafted for a premium finish. Completed with a sturdy genuine cow leather strap and a waterproof inner lining to protect your belongings. Dimensions: 30 x 9 x 15 cm.",
+    maintenance: "Avoid washing crocheted bags in a washing machine as it can damage the knit structure. Hand washing is a gentler method. Choose a mild detergent or soap that is free from bleach. In addition to washing, regularly clean the knitted bag with a soft brush or cloth to remove dust and light dirt."
   },
   {
-    id: "S-Pakarena",
-    name: "Pakarena Shoes",
-    category: "shoe",
-    brand: "d'schön",
-    priceRange: "IDR 200,000-250,000",
-    description: "Design that combines traditional and modern elements with gradient dyeing.",
-    material: "Poly Yarn (Gradient)",
-    image: "/images/pakarena.png"
+    id: "B-Pottea",
+    name: "Potea Bag",
+    category: "bag",
+    brand: "Milioiki",
+    basePrice: 1258000,
+    sizes: "Large Tote",
+    description: "A functional bucket-shaped crochet bag with a modern yet timeless design. This practical piece offers a unique architectural silhouette that balances artisan charm with sophisticated modern utility, perfect for both daily wear and special occasions.",
+    material: "Durable Poly Yarn with a Detachable Genuine Cow Leather handle",
+   variants: [
+      { 
+        colorName: "Classic Tan", 
+        colorCode: "#D2B48C", 
+      
+        images: [
+          "/images/pottea-1.jpg",
+          "/images/pottea-2.jpg",
+          "/images/pottea-3.jpg",
+          "/images/pottea-4.jpg",
+          "/images/pottea-5.jpg"
+        ] 
+      }
+    ],
+    details: "Features a unique bucket-style construction with dual straps: a short fixed handle and a detachable long strap for versatile styling. Lightweight and durable, this bag is designed without an inner lining to highlight its organic texture. Dimensions: 30 x 9 x 42 cm.",
+    maintenance: "Avoid washing crocheted bags in a washing machine as it can damage the knit structure. Hand washing is a gentler method. Choose a mild detergent or soap that is free from bleach. In addition to washing, regularly clean the knitted bag with a soft brush or cloth to remove dust and light dirt."
   },
   {
-    id: "S-Marina",
-    name: "Marina Sandals",
-    category: "shoe",
-    brand: "d'schön",
-    priceRange: "IDR 120,000-150,000",
-    description: "Comfortable handcrafted sandals perfect for daily wear.",
-    material: "Poly Yarn",
-    image: "/images/marina.jpg"
+    id: "B-Edel",
+    name: "Edel Bag",
+    category: "bag",
+    brand: "Milioiki",
+    basePrice: 1175000,
+    sizes: "Large",
+    description: "A handmade crocheted shoulder bag with neat details, completed with genuine leather straps for strength and comfort.",
+    material: "Nylon Yarn combination with Genuine Leather",
+    variants: [
+      { 
+        colorName: "Deep Burgundy", 
+        colorCode: "#500B1E", 
+        images: ["/images/edel-burgundy.png", "/images/edel-burgundy-2.png"] 
+      },
+      { 
+        colorName: "Bold Red", 
+        colorCode: "#8E0202", 
+        images: ["/images/edel-red.png"] 
+      },
+      { 
+        colorName: "Classic Tan", 
+        colorCode: "#B18C6C", 
+        images: ["/images/edel-tan.png"] 
+      },
+      { 
+        colorName: "Midnight Navy", 
+        colorCode: "#192740", 
+        images: ["/images/edel-navy.png"] 
+      }
+    ],
+    details: "Meticulously handcrafted with high-density nylon yarn for lasting durability. Features a premium waterproof inner lining to keep your essentials protected and genuine leather straps designed for a refined touch. Dimensions: 50 x 26 cm.",
+    maintenance: "Avoid washing crocheted bags in a washing machine as it can damage the knit structure. Hand washing is a gentler method. Choose a mild detergent or soap that is free from bleach. In addition to washing, regularly clean the knitted bag with a soft brush or cloth to remove dust and light dirt."
   },
   {
-    id: "S-Terra",
-    name: "Terra Slip-Ons",
-    category: "shoe",
-    brand: "d'schön",
-    priceRange: "IDR 180,000-220,000",
-    description: "Easy slip-on design with durable sole and breathable crochet upper.",
-    material: "Poly Yarn",
-    image: "/images/terra.jpg"
+    id: "B-Orlyn",
+    name: "Orlyn Bag",
+    category: "bag",
+    brand: "Milioiki",
+    basePrice: 1300000,
+    sizes: "Medium Tote",
+    description: "A masterfully crafted crochet tote featuring a unique geometric silhouette. Combining high-density nylon construction with refined leather accents, the Orlyn Bag is designed for the sophisticated woman who requires both elegance and ample space for her daily essentials.",
+    material: "High-quality Nylon Yarn combined with Genuine Cow Leather",
+    variants: [
+      { 
+        colorName: "Midnight Charcoal", 
+        colorCode: "#3B3B3B", 
+        images: ["/images/orlyn-charcoal.jpg"] 
+      },
+      { 
+        colorName: "Caramel Gold", 
+        colorCode: "#AB875C", 
+        images: ["/images/orlyn-caramel.png"] 
+      },
+      { 
+        colorName: "Dark Burgundy", 
+        colorCode: "#5B191E", 
+        images: ["/images/orlyn-burgundy.png"] 
+      },
+      { 
+        colorName: "Roasted Coffee", 
+        colorCode: "#5D493E", 
+        images: ["/images/orlyn-coffee.png"] 
+      },
+      { 
+        colorName: "Fossil Gray", 
+        colorCode: "#7D7371", 
+        images: ["/images/orlyn-gray.png"] 
+      }
+    ],
+    details: "Meticulously handcrafted using durable nylon yarn for a structured finish. Features a premium waterproof inner lining for maximum protection and comfortable genuine leather shoulder straps. Dimensions: 33 x 9 x 33 cm.",
+    maintenance: "Avoid washing crocheted bags in a washing machine as it can damage the knit structure. Hand washing is a gentler method. Choose a mild detergent or soap that is free from bleach. In addition to washing, regularly clean the knitted bag with a soft brush or cloth to remove dust and light dirt."
   },
 
-  // --- BAGS ---
+  // --- SHOES (BRAND: D'SCHÖN) ---
   {
-    id: "B-Camila",
-    name: "Camila Tote",
-    category: "bag",
-    brand: "Milioiki",
-    priceRange: "USD 30-45",
-    description: "Simple yet elegant design with timeless appeal.",
-    material: "Premium Thread",
-    image: "/images/camila.png"
+    id: "S-Traveler-Rosi",
+    name: "Traveler Lady (Sole Rossi)",
+    category: "shoe",
+    brand: "d'schön",
+    basePrice: 1300000,
+    sizes: "EU 36 - 40",
+    description: "A stylish and versatile crochet shoe designed to pair effortlessly with any outfit, from casual to semi-formal. Its breathable hand-crocheted construction ensures superior comfort for the urban traveler, blending artisanal charm with modern functionality.",
+    material: "Premium Poly Yarn upper with Rossi Sole",
+   variants: [
+      { 
+        colorName: "Oatmeal Beige", 
+        colorCode: "#D1C2BA", 
+        images: ["/images/shoe-traveler-rosi-oatmeal.png"] 
+      },
+      { 
+        colorName: "Steel Gray", 
+        colorCode: "#979EA8", 
+        images: ["/images/shoe-traveler-rosi-gray.png"] 
+      }
+    ],
+    details: "Hand-crocheted upper featuring a combination of plain and speckled poly yarn for a unique, breathable fit. Equipped with the Rossi sole: characterized by its medium thickness, neat finish, and high stability, providing a comfortable and secure walking experience. Size Range: EU 36 - 40.",
+    maintenance: "Avoid washing in a washing machine as it can damage the knit structure. Hand washing is a gentler method. Choose a mild detergent or soap that is free from bleach. Regularly clean with a soft brush or cloth to remove dust and light dirt."
   },
   {
-    id: "B-Net",
-    name: "Net Bag - Summer Edition",
-    category: "bag",
-    brand: "Milioiki",
-    priceRange: "USD 18-25",
-    description: "Made from poly yarn, known for its strength and flexibility.",
-    material: "Poly Yarn",
-    features: ["Summer"], // Tag untuk filter
-    image: "/images/bag_net.png"
+    id: "S-Traveler-Docmart",
+    name: "Traveler Lady (Sole Docmart)",
+    category: "shoe",
+    brand: "d'schön",
+    basePrice: 1300000,
+    sizes: "EU 36 - 42",
+   description: "A stylish and versatile crochet shoe designed to pair effortlessly with any outfit, from casual to semi-formal. Its breathable hand-crocheted construction ensures superior comfort for the urban traveler, blending artisanal charm with modern functionality.",
+    material: "Premium Poly Yarn upper with Rossi Sole",
+   variants: [
+      { 
+        colorName: "Khaki Tan", 
+        colorCode: "#B8A079", 
+        images: ["/images/shoe-traveler-docmart-khaki.png"] 
+      },
+      { 
+        colorName: "Mustard Gold", 
+        colorCode: "#CD9E46", 
+        images: ["/images/shoe-traveler-docmart-mustard.png"] 
+      },
+      { 
+        colorName: "Coffee Brown", 
+        colorCode: "#795C3C", 
+        images: ["/images/shoe-traveler-docmart-coffee.png"] 
+      }
+    ],
+
+    details: "Hand-crocheted upper featuring a combination of plain and speckled poly yarn for a unique, breathable fit. Equipped with the Rossi sole: characterized by its medium thickness, neat finish, and high stability, providing a comfortable and secure walking experience. Size Range: EU 36 - 42.",
+    maintenance: "Avoid washing in a washing machine as it can damage the knit structure. Hand washing is a gentler method. Choose a mild detergent or soap that is free from bleach. Regularly clean with a soft brush or cloth to remove dust and light dirt."
   },
   {
-    id: "B-Blossom",
-    name: "Blossom Clutch",
-    category: "bag",
-    brand: "Milioiki",
-    priceRange: "USD 35-50",
-    description: "Elegant clutch with floral motifs.",
-    material: "Poly Yarn",
-    image: "/images/bag_blossom.png"
+    id: "S-Pakarena-Rossi",
+    name: "Pakarena (Sole Rossi)",
+    category: "shoe",
+    brand: "d'schön",
+    basePrice: 1375000,
+    sizes: "EU 36 - 40",
+    description: "An attractive design that beautifully combines traditional and modern elements. These shoes utilize a specialized dyeing technique that creates appealing color gradients or unique color combinations, making each pair a work of art.",
+    material: "Premium Poly Yarn upper with Rossi Sole",
+   variants: [
+      { 
+        colorName: "Sand Beige", 
+        colorCode: "#E9D9C7", 
+        images: ["/images/shoe-pakarena-rosi-beige.png"] 
+      },
+      { 
+        colorName: "Obsidian Black", 
+        colorCode: "#181E26", 
+        images: ["/images/shoe-pakarena-rosi-black.png"] 
+      }
+    ],
+    details: "Expertly hand-crocheted using high-quality poly yarn featuring a signature circular gradient pattern. Equipped with the Rossi sole: known for its medium thickness, neat aesthetic, and superior stability for a balanced walking experience. Size Range: EU 36 - 40.",
+    maintenance: "Avoid washing in a washing machine as it can damage the knit structure. Hand washing is a gentler method. Choose a mild detergent or soap that is free from bleach. Regularly clean with a soft brush or cloth to remove dust and light dirt."
   },
   {
-    id: "B-Heritage",
-    name: "Heritage Woven Tote",
-    category: "bag",
-    brand: "Milioiki",
-    priceRange: "USD 40-55",
-    description: "Combining traditional weaving with modern tote functionality.",
-    material: "Poly Yarn & Leather",
-    image: "/images/bag_heritage.png"
-  },
-  {
-    id: "B-Urban",
-    name: "Urban Crossbody",
-    category: "bag",
-    brand: "Milioiki",
-    priceRange: "USD 28-38",
-    description: "Practical crossbody bag for urban lifestyle.",
-    material: "Leather & Yarn",
-    image: "/images/bag_urban.png"
-  },
-  {
-    id: "B-Artisan",
-    name: "Artisan Bucket Bag",
-    category: "bag",
-    brand: "Milioiki",
-    priceRange: "USD 45-60",
-    description: "Unique bucket shape with intricate patterns.",
-    material: "Poly Yarn",
-    image: "/images/bag_artisan.jpg"
-  },
-  {
-    id: "B-Coastal",
-    name: "Coastal Mini Bag",
-    category: "bag",
-    brand: "Milioiki",
-    priceRange: "USD 22-32",
-    description: "Small and light, perfect for beach walks.",
-    material: "Poly Yarn",
-    features: ["Summer"],
-    image: "/images/bag_coastal.png"
+    id: "S-Pakarena-Pakarena",
+    name: "Pakarena (Sole Pakarena)",
+    category: "shoe",
+    brand: "d'schön",
+    basePrice: 1375000,
+    sizes: "EU 36 - 40",
+    description: "An attractive design that beautifully combines traditional and modern elements. Utilizing a specialized dyeing technique, these shoes feature appealing color gradients that make each pair uniquely expressive and artistic.",
+    material: "Premium Poly Yarn upper with Pakarena Signature Sole",
+   variants: [
+      { 
+        colorName: "Sage Sand", 
+        colorCode: "#BFBA9B", 
+        images: ["/images/shoe-pakarena-pakarena-sand.png"] 
+      },
+      { 
+        colorName: "Leaf Green", 
+        colorCode: "#1C7829", 
+        images: ["/images/shoe-pakarena-pakarena-green.png"] 
+      }
+    ],
+   details: "Hand-crocheted upper featuring intricate circular patterns and artistic color combinations. Equipped with the Pakarena signature sole: specifically designed to be thin, lightweight, and flexible, providing a natural 'soft feel' and maximum comfort for all-day movement. Size Range: EU 36 - 40.",
+    maintenance: "Avoid washing in a washing machine as it can damage the knit structure. Hand washing is a gentler method. Choose a mild detergent or soap that is free from bleach. Regularly clean with a soft brush or cloth to remove dust and light dirt."
   }
 ];
 
@@ -157,7 +344,7 @@ export const timelineEvents = [
   {
     year: 2018,
     title: "Foundation",
-    description: "Started as Schön Craft, a small team of passionate artisans in Cikarang."
+    description: "Started as Schön Craft, a small team of passionate artisans."
   },
   {
     year: 2023,
@@ -167,7 +354,7 @@ export const timelineEvents = [
   {
     year: 2025,
     title: "Global Reach",
-    description: "Serving global demand with 20 skilled artisans and two premium brands (d'schön & Milioiki). Strategically expanding export networks."
+    description: "Serving global demand with 20 skilled artisans and two premium brands (d'schön & Milioiki)."
   },
 ];
 
@@ -183,24 +370,24 @@ export const exhibitionData = [
         years: "2018 - 2019",
         events: [
             // 2018
-            "Bazaar Citos (Cilandak Town Square Jakarta) - Dec 2018",
+            "Citos Bazaar (Cilandak Town Square Jakarta) - Dec 2018",
             // 2019
-            "Exhibition ITT Expo 2019 in Bali - April 2019",
-            "Bazaar in Gedung Manggala Wana Bakti Jakarta - April 2019",
-            "Bazaar in Gedung Kementerian Kelautan - April 2019",
-            "Bazaar Citos Jakarta - April 2019",
-            "Exhibition Inacraft in JCC - April 2019",
-            "Exhibition in Gedung Kementerian Perindustrian - May 2019",
-            "Bazaar Akbar Ramadhan in Kementerian Lingkungan Hidup dan Kehutanan RI - May 2019",
-            "Exhibition Gebyar IPPKINDO 9th Expo in JCC - June 2019",
-            "Exhibition Indonesia Product Expo 2019 in City Point Malang - July 2019",
-            "Exhibition in kantor Pemkab Bekasi - Sep 2019",
-            "Bazaar produk unggulan in Gedung Manggala Wana Bakti - Sep 2019",
-            "Bazaar DWP KKP - Oct 2019",
-            "Bazaar in Gedung Sapta Pesona - Oct 2019",
-            "Pameran Crafina 2019 in JCC - Oct 2019",
-            "Bazaar in Gedung Sapta Pesona - Nov 2019",
-            "Bazaar HUT Darmawanita KLHK 2019 - Dec 2019",
+            "ITT Expo 2019 Exhibition in Bali - April 2019",
+            "Bazaar at Manggala Wana Bakti Building Jakarta - April 2019",
+            "Bazaar at the Ministry of Marine Affairs and Fisheries - April 2019",
+            "Citos Bazaar Jakarta - April 2019",
+            "Inacraft Exhibition at JCC - April 2019",
+            "Exhibition at the Ministry of Industry Building - May 2019",
+            "Grand Ramadan Bazaar at the Ministry of Environment and Forestry RI - May 2019",
+            "9th Gebyar IPPKINDO Expo Exhibition at JCC - June 2019",
+            "Indonesia Product Expo 2019 Exhibition at City Point Malang - July 2019",
+            "Exhibition at Bekasi Regency Government Office - Sep 2019",
+            "Featured Products Bazaar at Manggala Wana Bakti Building - Sep 2019",
+            "DWP KKP Bazaar - Oct 2019",
+            "Bazaar at Sapta Pesona Building - Oct 2019",
+            "Crafina 2019 Exhibition at JCC - Oct 2019",
+            "Bazaar at Sapta Pesona Building - Nov 2019",
+            "2019 KLHK Dharmawanita Anniversary Bazaar - Dec 2019",
         ]
     },
 
@@ -210,16 +397,16 @@ export const exhibitionData = [
         years: "2020 - 2023",
         events: [
             // 2020
-            "Exhibition TILATEX Expo in Jogja City Mall - Yogyakarta - March 2020",
+            "TILATEX Expo Exhibition at Jogja City Mall - Yogyakarta - March 2020",
             // 2022
-            "Pameran di Ibis Hotel Cikarang - Nov 2022",
+            "Exhibition at Ibis Hotel Cikarang - Nov 2022",
             // 2023
-            "Bazaar DWP KKP - Jul 2023",
-            "Pameran di Gedung Dinas Pariwisata Kab. Bekasi - Jul 2023",
-            "Bazaar Muharram fair 1445 H di Gedung Beacukai Bekasi - Jul 2023",
-            "Mini Bazaar DWP DJP - Agust 2023",
-            "Bazaar Hut ke-77 Perwita Wana Kencana Pusat Kementerian Lingkungan Hidup dan Kehutanan RI - Sep 2023",
-            "Pameran Inacraft di JCC - Okt 2023",
+            "DWP KKP Bazaar - Jul 2023",
+            "Exhibition at the Bekasi Regency Tourism Office Building - Jul 2023",
+            "1445 H Muharram Fair Bazaar at Bekasi Customs and Excise Building - Jul 2023",
+            "DWP DJP Mini Bazaar - Aug 2023",
+            "77th Anniversary Bazaar of Perwita Wana Kencana Pusat, Ministry of Environment and Forestry RI - Sep 2023",
+            "Inacraft Exhibition at JCC - Oct 2023",
         ]
     },
 
@@ -229,15 +416,15 @@ export const exhibitionData = [
         years: "2024 - 2025",
         events: [
             // 2024
-            "Pameran Inacraft di JCC - Maret 2024",
-            "Bazaar MTQ ke-38 di Pemda Kab. Bekasi - Mei 2024",
-            "Pameran PKJB di Trans Studio Bandung - Juni 2024",
-            "Bazaar di Hotel Nuaza Cikarang - Jul 2024",
-            "Mengisi outlet Dekranasda Aeon Mall Deltamas - Maret 2024 -", // Dipertahankan seperti data Anda
+            "Inacraft Exhibition at JCC - March 2024",
+            "38th MTQ Bazaar at Bekasi Regency Government Office - May 2024",
+            "PKJB Exhibition at Trans Studio Bandung - June 2024",
+            "Bazaar at Nuaza Hotel Cikarang - Jul 2024",
+            "Supplying Dekranasda Outlet at Aeon Mall Deltamas - March 2024 - Present",
             // 2025 (Upcoming)
-            "Pameran Inacraft di JCC - Februari 2025",
-            "Bazaar DWP KEMDIKSAINTEK - April 2025",
-            "Bazaar The Sultan Hotel & Residence Jakarta - May 2025",
+            "Inacraft Exhibition at JCC - February 2025",
+            "DWP KEMDIKSAINTEK Bazaar - April 2025",
+            "The Sultan Hotel & Residence Bazaar Jakarta - May 2025",
         ]
     }
 ];
@@ -249,14 +436,14 @@ export const certificationData = [
         subtitle: "Official Brand Registration for d'schön",
         type: "legal",
         image: "/images/hki_dschon.png",
-        details: "Registered under the Ministry of Law and Human Rights, Republic of Indonesia. IDM000639902"
+        details: "Registered under the Ministry of Law and Human Rights, Republic of Indonesia. IDM000820860"
     },
     {
         title: "HKI Merek Certificate",
         subtitle: "Official Brand Registration for Milioiki",
         type: "legal",
         image: "/images/hki_milioiki.png",
-        details: "Registered under the Ministry of Law and Human Rights, Republic of Indonesia. IDM00117811"
+        details: "Registered under the Ministry of Law and Human Rights, Republic of Indonesia. IDM001179711"
     },
     
     // --- TRAINING & CERTIFICATION (Tambahan Image Path) ---

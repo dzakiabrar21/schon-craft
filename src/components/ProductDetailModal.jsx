@@ -8,7 +8,7 @@ const ProductDetailModal = ({ product, onClose }) => {
 
     // 2. Setup Link WhatsApp
     // Pesan otomatis mencakup ID dan Nama Produk untuk memudahkan admin
-    const whatsappLink = `https://wa.me/6281280001670?text=Hello%20PT.%20Schon%20Craft%20Indonesia,%20I%20am%20interested%20in%20bulk%20order%20for%20${product.name}%20(ID:%20${product.id}).%20Can%20you%20provide%20more%20details?`;
+    const whatsappLink = `https://wa.me/6285771019071?text=Hello%20PT.%20Schon%20Craft%20Indonesia,%20I%20am%20interested%20in%20bulk%20order%20for%20${product.name}%20(ID:%20${product.id}).%20Can%20you%20provide%20more%20details?`; 
 
     // 3. Menentukan Brand Name (Fallback jika data kosong)
     const brandName = product.brand || "Milioiki";

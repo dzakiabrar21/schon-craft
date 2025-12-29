@@ -36,7 +36,7 @@ const Contact = () => {
                         Contact Us
                     </h1>
                     <p className="mt-4 text-lg font-light max-w-2xl mx-auto opacity-90">
-                        We'd love to hear from you. Reach out for inquiries, collaborations, or bulk orders.
+                        We'd love to hear from you. Reach out for inquiries and collaborations.
                     </p>
                 </div>
             </section>
@@ -123,9 +123,6 @@ const Contact = () => {
                                 <MessageCircle className="w-6 h-6" />
                                 Start Inquiry
                             </a>
-                            <p className="text-center text-xs text-[#6D2323]/60 mt-4">
-                                Our artisans are based in Cikarang, West Java, Indonesia.
-                            </p>
                         </div>
                     </div>
                 </div>

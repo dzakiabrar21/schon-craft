@@ -11,47 +11,86 @@
 export const products = [
   // --- BAGS (BRAND: MILIOIKI) ---
 {
-    id: "B-Schmette",
-    name: "Schmette Bag",
+    id: "B-Schmette-Small",
+    name: "Schmette Bag (small)",
     category: "bag",
     brand: "Milioiki",
     basePrice: 695000,
-    sizes: "Small, Medium",
+    sizes: "Small",
     description: "A mini crochet bag with a compact silhouette, crafted from poly yarn and finished with a genuine cow leather sling. Perfect for carrying your essential items.",
     material: "Poly Yarn finished with a Genuine Cow Leather Sling",
     variants: [
       { 
-        colorName: "Sage Green", 
-        colorCode: "#96A48B", 
-        images: ["/images/schmette-sm-sage.png"] 
-      },
-      { 
-        colorName: "Terracotta", 
-        colorCode: "#E2725B", 
-        // Ditambahkan 2 foto tambahan
-        images: [
-          "/images/schmette-sm-terra.jpg",
-          "/images/schmette-sm-terra-2.jpg",
-          "/images/schmette-sm-terra-3.jpg"
+        colorName: "Terra cotta + Sand", 
+        colorCodes: ["#E2725B", "#C2B280"], 
+        images: ["/images/schmette-sm-terra-sand.png", 
+                  "/images/schmette-sm-terra-sand-2.jpg",
+                  "/images/schmette-sm-terra-sand-3.jpg",
+                  "/images/schmette-sm-terra-sand-4.jpg"
         ] 
       },
       { 
-        colorName: "Mocca", 
-        colorCode: "#A38068", 
-        images: ["/images/schmette-sm-mocca.png"] 
+        colorName: "Brick red + Dodger Blue", 
+        colorCodes: ["#CB4154", "#1E90FF"], 
+        images: ["/images/schmette-sm-brick-blue.png"] 
       },
       { 
-        colorName: "Grayish Blue", 
-        colorCode: "#969EB0", 
-        images: ["/images/schmette-sm-grayish.png"] 
+        colorName: "Dark brown + Cool Grey", 
+        colorCodes: ["#5D4037", "#8E9191"], 
+        images: ["/images/schmette-sm-brown-grey.png"] 
       },
       { 
-        colorName: "Olive", 
-        colorCode: "#80004fff", 
-        images: ["/images/schmette-sm-olive.png"] 
+        colorName: "Cobalt Blue + Turquoise", 
+        colorCodes: ["#0047AB", "#40E0D0"], 
+        images: ["/images/schmette-sm-cobalt-turquoise.png"] 
       }
     ],
-    details: "Crafted with meticulous hand-crochet techniques, featuring a magnetic snap closure and a premium satin interior lining.",
+    details: `Category : Small bag
+Dimensions : 12 x 9 x 10/16 cm
+Body Material : Poly Yarn
+Strap Material : Genuine Cow Leather`,
+    maintenance: "Avoid washing crocheted bags in a washing machine as it can damage the knit structure. Hand washing is a gentler method. Choose a mild detergent or soap that is free from bleach. In addition to washing, regularly clean the knitted bag with a soft brush or cloth to remove dust and light dirt."
+},
+{
+    id: "B-Schmette-Medium",
+    name: "Schmette Bag (medium)",
+    category: "bag",
+    brand: "Milioiki",
+    basePrice: 835000,
+    sizes: "Medium",
+    description: "A mini crochet bag with a compact silhouette, crafted from poly yarn and finished with a genuine cow leather sling. Perfect for carrying your essential items.",
+    material: "Poly Yarn finished with a Genuine Cow Leather Sling",
+    variants: [
+      { 
+        colorName: "Dark brown + Cool Grey", 
+        colorCodes: ["#5D4037", "#8E9191"], 
+        images: ["/images/schmette-sm-brown-grey.png"] 
+      },
+      { 
+        colorName: "Terra cotta + Sand", 
+        colorCodes: ["#E2725B", "#C2B280"], 
+        images: ["/images/schmette-sm-terra-sand.png", 
+                  "/images/schmette-sm-terra-sand-2.jpg",
+                  "/images/schmette-sm-terra-sand-3.jpg",
+                  "/images/schmette-sm-terra-sand-4.jpg"
+        ] 
+      },
+      { 
+        colorName: "Brick red + Dodger Blue", 
+        colorCodes: ["#CB4154", "#1E90FF"], 
+        images: ["/images/schmette-sm-brick-blue.png"] 
+      },
+      { 
+        colorName: "Cobalt Blue + Turquoise", 
+        colorCodes: ["#0047AB", "#40E0D0"], 
+        images: ["/images/schmette-sm-cobalt-turquoise.png"] 
+      }
+    ],
+
+    details: `Category : Small bag
+              Dimensions : 23 x 9 x 15/20 cm
+              Body Material : Poly Yarn
+              Strap Material : Genuine Cow Leather`,
     maintenance: "Avoid washing crocheted bags in a washing machine as it can damage the knit structure. Hand washing is a gentler method. Choose a mild detergent or soap that is free from bleach. In addition to washing, regularly clean the knitted bag with a soft brush or cloth to remove dust and light dirt."
 },
   {
@@ -60,20 +99,23 @@ export const products = [
     category: "bag",
     brand: "Milioiki",
     basePrice: 598000,
-    sizes: "One Size",
-    description: "A rose-shaped sling bag paired with a genuine leather handle. Compact yet expressive, this piece blends soft poly yarn construction with a refined cow leather sling. Perfect as a statement small bag for everyday wear, it offers just the right space for your essentials.",
+    sizes: "Small Bag",
+    description: "A rose-shaped sling bag paired with a genuine cow leather handle.",
     material: "Soft Poly Yarn with Refined Cow Leather Sling",
     variants: [
       {
-        colorName: "Maroon",
-        colorCode: "#800000",
+        colorName: "Terra cotta",
+        colorCode: "#E35336",
         images: [         
           "/images/rose-maroon.png",
           "/images/rose-maroon-2.png",
           "/images/rose-maroon-3.jpg"]
       }
     ],
-    details: "Unique rose silhouette handcrafted with premium precision. Features a waterproof inner lining and a sturdy genuine cow leather strap for comfort and durability. Size (Dia 19 x 5) cm.",
+    details: `Category : Small bag
+              Dimensions : Dia 19 x 5 cm
+              Body Material : Poly Yarn
+              Strap Material : Genuine Cow Leather`,
     maintenance: "Avoid washing crocheted bags in a washing machine as it can damage the knit structure. Hand washing is a gentler method. Choose a mild detergent or soap that is free from bleach. In addition to washing, regularly clean the knitted bag with a soft brush or cloth to remove dust and light dirt."
   },
   {
@@ -82,32 +124,35 @@ export const products = [
     category: "bag",
     brand: "Milioiki",
     basePrice: 869000,
-    sizes: "Standard",
-    description: "A crocheted handbag with floral details and a sturdy leather strap, combining craftsmanship, style, and everyday functionality. Made from nylon yarn combined with leather, it offers both durability and elegance for daily use.",
+    sizes: "Medium Bag",
+    description: "A floral-detailed knot bag made from sturdy nylon yarn and paired with genuine cow leather. Designed to deliver both durability and a polish look for everyday use.",
     material: "High-quality Nylon Yarn combined with Genuine Cow Leather",
   variants: [
       { 
-        colorName: "Terracotta Red", 
-        colorCode: "#BF3C2F", 
+        colorName: "Terracotta Red + Olive Sage", 
+        colorCodes: ["#BF3C2F", "#879769"], 
         images: ["/images/denia-terracotta.png", "/images/denia-terracotta-2.jpg"] 
       },
       { 
-        colorName: "Dusty Teal", 
-        colorCode: "#6BA3B8", 
+        colorName: "Dusty Teal + Peach Blush", 
+        colorCodes: ["#6BA3B8", "#EDC3BA"], 
         images: ["/images/denia-teal.png"] 
       },
       { 
-        colorName: "Desert Sand", 
-        colorCode: "#BA9470", 
-        images: ["/images/denia-sand.png"] 
+        colorName: "Wild Berry + Ebony Brown", 
+        colorCodes: ["#D11E48", "#5C3D27"], 
+        images: ["/images/denia-berry.png"] 
       },
       { 
-        colorName: "Wild Berry", 
-        colorCode: "#D11E48", 
-        images: ["/images/denia-berry.png"] 
+        colorName: "Brick Red + Ebony Brown + Desert Sand", 
+        colorCodes: ["#CD1E20", "#5C3D27", "#BA9470"], 
+        images: ["/images/denia-sand.png"] 
       }
     ],
-    details: "Features intricate floral crochet details handcrafted for a premium finish. Completed with a sturdy genuine cow leather strap and a waterproof inner lining to protect your belongings. Dimensions: 30 x 9 x 15 cm.",
+    details: `Category : Medium bag
+                  Dimensions : 30 x 9 x 15 cm
+                  Body Material : Nylon Yarn
+                  Strap Material : Genuine Cow Leather`,
     maintenance: "Avoid washing crocheted bags in a washing machine as it can damage the knit structure. Hand washing is a gentler method. Choose a mild detergent or soap that is free from bleach. In addition to washing, regularly clean the knitted bag with a soft brush or cloth to remove dust and light dirt."
   },
   {
@@ -116,13 +161,13 @@ export const products = [
     category: "bag",
     brand: "Milioiki",
     basePrice: 1258000,
-    sizes: "Large Tote",
-    description: "A functional bucket-shaped crochet bag with a modern yet timeless design. This practical piece offers a unique architectural silhouette that balances artisan charm with sophisticated modern utility, perfect for both daily wear and special occasions.",
+    sizes: "Large Bucket Bag",
+    description: "A versatile bucket-style crochet bag made from poly yarn, featuring a genuine cow leather handle that can be attached or removed as needed. Perfect for day-to-day routines.",
     material: "Durable Poly Yarn with a Detachable Genuine Cow Leather handle",
    variants: [
       { 
-        colorName: "Classic Tan", 
-        colorCode: "#D2B48C", 
+        colorName: "Terra cotta", 
+        colorCode: "#E35336", 
       
         images: [
           "/images/pottea-1.jpg",
@@ -133,7 +178,10 @@ export const products = [
         ] 
       }
     ],
-    details: "Features a unique bucket-style construction with dual straps: a short fixed handle and a detachable long strap for versatile styling. Lightweight and durable, this bag is designed without an inner lining to highlight its organic texture. Dimensions: 30 x 9 x 42 cm.",
+    details: `Category : Large Bucket Bag
+              Dimensions : 30 x 9 x 42 cm
+              Body Material : Poly Yarn
+              Handle Material : Genuine Cow Leather`,
     maintenance: "Avoid washing crocheted bags in a washing machine as it can damage the knit structure. Hand washing is a gentler method. Choose a mild detergent or soap that is free from bleach. In addition to washing, regularly clean the knitted bag with a soft brush or cloth to remove dust and light dirt."
   },
   {
@@ -243,7 +291,7 @@ export const products = [
     basePrice: 1300000,
     sizes: "EU 36 - 42",
    description: "A stylish and versatile crochet shoe designed to pair effortlessly with any outfit, from casual to semi-formal. Its breathable hand-crocheted construction ensures superior comfort for the urban traveler, blending artisanal charm with modern functionality.",
-    material: "Premium Poly Yarn upper with Rossi Sole",
+    material: "Premium Poly Yarn upper with Docmart Sole",
    variants: [
       { 
         colorName: "Khaki Tan", 
@@ -262,7 +310,7 @@ export const products = [
       }
     ],
 
-    details: "Hand-crocheted upper featuring a combination of plain and speckled poly yarn for a unique, breathable fit. Equipped with the Rossi sole: characterized by its medium thickness, neat finish, and high stability, providing a comfortable and secure walking experience. Size Range: EU 36 - 42.",
+   details: "Hand-crocheted upper featuring a combination of plain and speckled poly yarn for a unique, breathable fit.  Equipped with the Docmart sole: characterized by its thick and hard structure, anti-slip properties, and high durability, providing a sturdy and long-lasting walking experience.  Size Range: EU 36 - 42. ",
     maintenance: "Avoid washing in a washing machine as it can damage the knit structure. Hand washing is a gentler method. Choose a mild detergent or soap that is free from bleach. Regularly clean with a soft brush or cloth to remove dust and light dirt."
   },
   {

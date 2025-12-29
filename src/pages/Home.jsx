@@ -114,53 +114,57 @@ const Home = () => {
         </div>
       </section>
       
-      {/* 3. STORY SECTION */}
-      <section id="story-section" className="bg-[#FEF9E1] py-24 px-6 overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8 order-2 lg:order-1">
-            <h2 className="text-4xl font-serif font-bold text-[#6D2323] leading-tight">
-              Crafting Heritage, One Stitch at a Time
-            </h2>
-            <div className="space-y-6 text-base text-[#6D2323] font-sans">
-                <p className="leading-relaxed">
-                Established in 2018, PT. Schon Craft Indonesia has become a beacon of handcrafted excellence in the international market.
-                </p>
-                <p className="leading-relaxed">
-                We are proud to empower a community of 20 local artisans, preserving traditional crochet techniques while creating contemporary designs that resonate globally.
-                </p>
-            </div>
-            <div className="space-y-6 mt-8">
-                <div className="flex items-start space-x-4">
-                    <div className="mt-1"><CheckCircle className="w-6 h-6 text-[#A31D1D]" /></div>
-                    <div>
-                        <h4 className="text-2xl font-serif font-semibold text-[#6D2323]">Community Empowerment</h4>
-                        <p className="text-[#6D2323]/75">Supporting 20 local artisans</p>
-                    </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                    <div className="mt-1"><CheckCircle className="w-6 h-6 text-[#A31D1D]" /></div>
-                    <div>
-                        <h4 className="text-2xl font-serif font-semibold text-[#6D2323]">Two Premium Brands</h4>
-                        <ul className="text-[#6D2323]/75 mt-1 space-y-1">
-                            <li><strong>d'schön</strong> - Focus on handcrafted shoes </li>
-                            <li><strong>Milioiki</strong> - Specializing in premium bags</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+     {/* 3. STORY SECTION */}
+<section id="story-section" className="bg-[#FEF9E1] py-24 px-6 overflow-hidden">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    
+    {/* Kolom Teks - Mengatur ulang padding/margin agar tetap padat tanpa judul */}
+    <div className="space-y-10 order-2 lg:order-1">
+      <div className="space-y-6 text-lg text-[#6D2323] font-sans leading-relaxed">
+          <p>
+            Established in 2018, PT. Schon Craft Indonesia has become a beacon of handcrafted excellence in the international market.
+          </p>
+          <p>
+            We are proud to empower a community of 20 local artisans, preserving traditional crochet techniques while creating contemporary designs that resonate globally.
+          </p>
+      </div>
+
+      {/* Poin-poin Fitur */}
+      <div className="space-y-8 mt-10 pt-8 border-t border-[#6D2323]/10">
+          <div className="flex items-start space-x-4">
+              <div className="mt-1"><CheckCircle className="w-6 h-6 text-[#A31D1D]" /></div>
+              <div>
+                  <h4 className="text-2xl font-serif font-semibold text-[#6D2323]">Community Empowerment</h4>
+                  <p className="text-[#6D2323]/75">Supporting 20 local artisans</p>
+              </div>
           </div>
-          <div className="relative order-1 lg:order-2">
-            <div className="rounded-xl overflow-hidden shadow-2xl">
-                <img src="/images/artisan_work.jpg" alt="Artisan Crafting" className="w-full h-[600px] object-cover" />
-            </div>
-            <div className="absolute -bottom-10 right-0 lg:-right-10 bg-[#A31D1D] p-8 rounded-xl shadow-xl max-w-xs">
-                <p className="text-[#FEF9E1] font-sans text-base leading-relaxed italic">
-                    "Every piece tells a story of Indonesian craftsmanship and dedication to quality."
-                </p>
-            </div>
+          <div className="flex items-start space-x-4">
+              <div className="mt-1"><CheckCircle className="w-6 h-6 text-[#A31D1D]" /></div>
+              <div>
+                  <h4 className="text-2xl font-serif font-semibold text-[#6D2323]">Two Premium Brands</h4>
+                  <ul className="text-[#6D2323]/75 mt-1 space-y-1">
+                      <li><strong>d'schön</strong> - Focus on handcrafted shoes </li>
+                      <li><strong>Milioiki</strong> - Specializing in premium bags</li>
+                  </ul>
+              </div>
           </div>
-        </div>
-      </section>
+      </div>
+    </div>
+
+    {/* Kolom Gambar - Tetap sebagai penyeimbang visual */}
+    <div className="relative order-1 lg:order-2">
+      <div className="rounded-xl overflow-hidden shadow-2xl">
+          {/* Pastikan file image ini ada di folder public/images/ */}
+          <img src="/images/artisan_work.jpg" alt="Artisan Crafting" className="w-full h-[550px] object-cover" />
+      </div>
+      <div className="absolute -bottom-10 right-0 lg:-right-10 bg-[#A31D1D] p-8 rounded-xl shadow-xl max-w-xs">
+          <p className="text-[#FEF9E1] font-sans text-base leading-relaxed italic">
+              "Every piece tells a story of Indonesian craftsmanship and dedication to quality."
+          </p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* 4. CERTIFICATIONS SECTION */}
       <section className="bg-[#FEF9E1] py-24 px-6">

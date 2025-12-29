@@ -41,10 +41,6 @@ const ProductDetail = () => {
             <div className="max-w-[1430px] mx-auto px-6 md:px-[107px] py-12 flex flex-col lg:flex-row gap-12 lg:gap-16">
                 
                 {/* --- KOLOM KIRI: GALERI FOTO (GRID LAYOUT) --- */}
-                {/* Ubah w-full menjadi grid-cols-2 untuk menampilkan 2 foto berdampingan.
-                    'gap-4' memberikan jarak antar foto.
-                    'h-fit' agar tingginya menyesuaikan konten.
-                */}
                 <div className="w-full lg:w-[80%] grid grid-cols-2 gap-4 h-fit">
                     {selectedVariant.images.map((img, index) => (
                         <div key={index} className="w-full bg-[#FAFAFA] aspect-[3/4] overflow-hidden">
@@ -88,7 +84,7 @@ const ProductDetail = () => {
                         </p>
                     </div>
 
-                    {/* Color Selector */}
+                    {/* Color Selector (UPDATED LOGIC) */}
                     <div className="space-y-3 pt-4 border-t border-gray-100">
                         <p className="text-[13px] font-sans uppercase tracking-widest text-[#6D2323]/70">
                             Color: <span className="text-[#6D2323] font-medium ml-1">{selectedVariant.colorName}</span>
@@ -98,12 +94,19 @@ const ProductDetail = () => {
                                 <button
                                     key={idx}
                                     onClick={() => setSelectedVariant(variant)}
-                                    className={`w-10 h-10 border transition-all duration-300 ${
+                                    className={`w-7 h-7 border transition-all duration-300 rounded-full ${
                                         selectedVariant.colorName === variant.colorName 
                                         ? 'border-[#6D2323] ring-1 ring-[#6D2323] ring-offset-2' 
                                         : 'border-gray-200 hover:border-[#6D2323]/50'
                                     }`}
-                                    style={{ backgroundColor: variant.colorCode }}
+                                    style={{ 
+                                            // Logika untuk menangani 1, 2, atau 3 warna secara dinamis
+                                            background: variant.colorCodes && variant.colorCodes.length === 3
+                                                ? `linear-gradient(135deg, ${variant.colorCodes[0]} 33.33%, ${variant.colorCodes[1]} 33.33%, ${variant.colorCodes[1]} 66.66%, ${variant.colorCodes[2]} 66.66%)`
+                                                : variant.colorCodes && variant.colorCodes.length === 2
+                                                ? `linear-gradient(135deg, ${variant.colorCodes[0]} 50%, ${variant.colorCodes[1]} 50%)`
+                                                : (variant.colorCodes ? variant.colorCodes[0] : variant.colorCode)
+                                        }}
                                     title={variant.colorName}
                                 />
                             ))}
@@ -128,21 +131,21 @@ const ProductDetail = () => {
                     {/* ACCORDION SECTIONS */}
                     <div className="border-t border-[#6D2323]/10 mt-6">
                         
-                        {/* Details */}
-                        <div className="border-b border-[#6D2323]/10">
-                            <button 
-                                onClick={() => setOpenSection(openSection === 'details' ? '' : 'details')}
-                                className="w-full flex justify-between items-center py-5 font-serif text-[16px] text-[#6D2323] hover:opacity-70 transition-opacity"
-                            >
-                                Product details
-                                {openSection === 'details' ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
-                            </button>
-                            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${openSection === 'details' ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'}`}>
-                                <p className="text-[15px] leading-relaxed text-[#6D2323]/70 font-light">
-                                    {product.details}
-                                </p>
-                            </div>
+                       {/* Details (UPDATED WITH WHITESPACE CLASS) */}
+                    <div className="border-b border-[#6D2323]/10">
+                        <button 
+                            onClick={() => setOpenSection(openSection === 'details' ? '' : 'details')}
+                            className="w-full flex justify-between items-center py-5 font-serif text-[16px] text-[#6D2323] hover:opacity-70 transition-opacity"
+                        >
+                            Product details
+                            {openSection === 'details' ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                        </button>
+                        <div className={`overflow-hidden transition-all duration-500 ease-in-out ${openSection === 'details' ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'}`}>
+                            <p className="whitespace-pre-line text-[15px] leading-relaxed text-[#6D2323]/70 font-light">
+                                {product.details}
+                            </p>
                         </div>
+                    </div>
 
                         {/* Maintenance */}
                         <div className="border-b border-[#6D2323]/10">

@@ -1,18 +1,15 @@
 // src/pages/Home.jsx
 import React, { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom'; // Pastikan Link diimpor
+import { Link } from 'react-router-dom';
 import { ShoppingBag, Award, Zap, CheckCircle, MessageCircle } from 'lucide-react';
-import { products } from '../data/products'; // Import data produk
-// HAPUS IMPORT MODAL
-// import ProductDetailModal from '../components/ProductDetailModal';
+import { products } from '../data/products';
 
 // Hook Context untuk Mata Uang
 import { useCurrency } from '../context/CurrencyContext';
 
 const Home = () => {
-  // State untuk Filter (HAPUS STATE MODAL)
+  // State untuk Filter
   const [activeFilter, setActiveFilter] = useState('all');
-  // const [selectedProduct, setSelectedProduct] = useState(null); // DELETE
 
   // Ambil data mata uang global
   const { currency, rates, symbols } = useCurrency();
@@ -43,9 +40,7 @@ const Home = () => {
     return result.slice(0, 3); 
   }, [activeFilter]);
 
-  // HAPUS FUNGSI MODAL
-  // const handleProductClick = (product) => { ... };
-  // const handleCloseModal = () => { ... };
+
 
   return (
     <div className="bg-[#FEF9E1] font-sans text-[#6D2323] overflow-x-hidden relative">
@@ -54,7 +49,7 @@ const Home = () => {
       <section 
         className="relative h-[90vh] flex items-center justify-center p-6"
         style={{ 
-            backgroundImage: 'url(/images/banner2.PNG)', 
+            backgroundImage: 'url(/images/banner2.png)', 
             backgroundSize: 'cover', 
             backgroundPosition: 'center' 
         }}
@@ -253,14 +248,14 @@ const Home = () => {
 
                     return (
                         <Link 
-                            to={`/product/${product.id}`} // UPDATE: Menggunakan Link ke halaman detail
+                            to={`/product/${product.id}`}
                             key={product.id} 
                             className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group flex flex-col overflow-hidden"
                         >
                             {/* Container Gambar */}
                             <div className="bg-white overflow-hidden relative aspect-square flex items-center justify-center p-0">
                                 <img 
-                                    src={mainImage} // UPDATE: Menggunakan logika gambar baru
+                                    src={mainImage}
                                     alt={product.name} 
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                                 />
@@ -304,8 +299,6 @@ const Home = () => {
             </div>
         </div>
       </section>
-
-      {/* HAPUS KOMPONEN MODAL DI BAWAH SINI */}
     </div>
   );
 };

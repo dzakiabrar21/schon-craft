@@ -47,7 +47,7 @@ const About = () => {
         <Timeline events={timelineEvents} />
       </section>
 
-{/* 3. ARTISAN SECTION - REVISI TOTAL SESUAI PERMINTAAN OWNER */}
+{/* 3. ARTISAN SECTION -  */}
 <section className="py-24 px-6 bg-[#FEF9E1]">
   <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       
@@ -159,7 +159,7 @@ const About = () => {
   </div>
 </section>
 
-      {/* SPACER DIV: Jarak Pemisah sebelum Footer */}
+      {/* Spacer before footer */}
       <div className="h-16 bg-white"></div>
     </div>
   );

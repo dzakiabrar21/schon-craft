@@ -39,7 +39,7 @@ const Catalog = () => {
                     {/* Product Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
                         {filteredProducts.map((product) => {
-                            // PERBAIKAN: Memastikan ProductCard menerima gambar meskipun struktur data berubah
+                            // TODO: Ensure ProductCard receives an image when data structure differs
                             const enhancedProduct = {
                                 ...product,
                                 image: product.image || (product.variants && product.variants[0]?.images[0])

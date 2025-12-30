@@ -87,7 +87,7 @@ Strap Material : Genuine Cow Leather`,
       }
     ],
 
-    details: `Category : Small bag
+    details: `Category : Medium bag
               Dimensions : 23 x 9 x 15/20 cm
               Body Material : Poly Yarn
               Strap Material : Genuine Cow Leather`,
@@ -391,7 +391,7 @@ export const teamMembers = [
 export const timelineEvents = [
   {
     year: 2018,
-    title: "Foundation",
+    title: "Establishment",
     description: "Started as Schön Craft, a small team of passionate artisans."
   },
   {
@@ -406,9 +406,7 @@ export const timelineEvents = [
   },
 ];
 
-// src/data/products.js (Tambahkan di bagian paling bawah)
-
-// src/data/products.js (UPDATE BAGIAN INI)
+// TODO: Review and update exhibition data and bottom items as needed
 
 
 export const exhibitionData = [
